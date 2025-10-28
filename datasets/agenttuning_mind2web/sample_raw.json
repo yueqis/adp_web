@@ -1,0 +1,67 @@
+[
+  {
+    "id": "mind2web_78",
+    "conversations": [
+      {
+        "role": "user",
+        "content": "'''\n<html> <div> <div navigation primary> <div> <a> Tent Camping </a> <a> Lodging </a> <a> Cabin Camping </a> <a id=0> Glamping </a> <a> Unique Lodging </a> <a> KOA Patio </a> <a> Extended Stays </a> </div> </div> <div main> <div> <div> <label> Where do you want to go? </label> <input id=1 text txtlocation destination, city/state, or campground name /> </div> <div> <label> Check In </label> <input id=2 text checkindate check in /> </div> <div> <label> Check Out </label> <input id=3 text checkoutdate check out /> </div> </div> <p> Within our family, youll find KOA Journeys, KOA Holidays and KOA Resorts <a id=4 across north america> across North America </a> . Each offers added amenities and services to make your stay more complete and better meet your expectations. Whether youre </p> </div> </div> </html>\n'''\n\nBased on the HTML webpage above, try to complete the following task:\nTask: Browse glamping locations in Northern California.\nPrevious actions:\n[link]  WAYS TO STAY  -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. <a id=0> Glamping </a>\nC. <input id=1 text txtlocation destination, city/state, or campground name />\nD. <input id=2 text checkindate check in />\nE. <input id=3 text checkoutdate check out />\nF. <a id=4 across north america> across North America </a>"
+      },
+      {
+        "role": "assistant",
+        "content": "Thought: The task is to see what deals there are for Dish Outdoor. Based on the HTML, the link with id=1 seems relevant.\nAnswer: C.\nAction: CLICK"
+      }
+    ]
+  },
+  {
+    "id": "mind2web_69",
+    "conversations": [
+      {
+        "role": "user",
+        "content": "'''\n<html> <div> <div> <div> <a> Overview </a> <a id=0> Find Care </a> </div> <app-common-question> <a id=1 what illnesses or conditions are> What illnesses or conditions are associated with a comprehensive health screening? </a> <p> Losing just 5 to 10% of your body weight can be enough to prevent many long-term health problems. While <a id=2> weight loss </a> can seem challenging, with support, you can ensure a healthier outlook for your life. </p> </app-common-question> </div> <div> <a id=3> Clinic Locator </a> <a id=4> Optical </a> </div> </div> </html>\n'''\n\nBased on the HTML webpage above, try to complete the following task:\nTask: Find a comprehensive health screening for women in 10003.\nPrevious actions:\n[span]  Schedule a women's health exam -> CLICK\n[link]  Comprehensive health screening Available in-person -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. <a id=0> Find Care </a>\nC. <a id=1 what illnesses or conditions are> What illnesses or\nD. <a id=2> weight loss </a>\nE. <a id=3> Clinic Locator </a>\nF. <a id=4> Optical </a>"
+      },
+      {
+        "role": "assistant",
+        "content": "Thought: None of the available options seem to be related to filtering cars by AWD and budget. There is no correct action available.\nAnswer: A. None of the above"
+      }
+    ]
+  },
+  {
+    "id": "mind2web_38",
+    "conversations": [
+      {
+        "role": "user",
+        "content": "'''\n<html> <div> <ngb-typeahead-window listbox> <button option button> </button> <button id=0 option button> <ngb-highlight> <span> Frosthaven </span> : Solo Scenarios (2022) </ngb-highlight> </button> <button option button> </button> </ngb-typeahead-window> <div> <a id=1> <span> 7 <svg img /> </span> Frosthaven </a> <p> Adventure in the frozen north and build up your outpost throughout an epic campaign. </p> </div> </div> </html>\n'''\n\nBased on the HTML webpage above, try to complete the following task:\nTask: View the complexity rating for Frosthaven.\nPrevious actions:\n[combobox]  Search -> TYPE: frosthaven\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. <button id=0 option button> <ngb-highlight> <span> Frosthaven </span> : Solo\nC. <a id=1> <span> 7 <svg img /> </span> Frosthaven </a>"
+      },
+      {
+        "role": "assistant",
+        "content": "Thought: The complexity rating is not mentioned in the provided HTML.\nAnswer: A. None of the above"
+      }
+    ]
+  },
+  {
+    "id": "mind2web_43",
+    "conversations": [
+      {
+        "role": "user",
+        "content": "'''\n<html> <div> <header banner> <div> <a id=0> Now Trending </a> <a> Collections </a> </div> </header> <button id=1> <span> Go to item undefined </span> </button> </div> </html>\n'''\n\nBased on the HTML webpage above, try to complete the following task:\nTask: What is trending now on AMC on-demand?\nPrevious actions:\n[link]  Visit the On Demand page -> HOVER\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. <a id=0> Now Trending </a>\nC. <button id=1> <span> Go to item undefined </span> </button>"
+      },
+      {
+        "role": "assistant",
+        "content": "Thought: The link \"Now Trending\" seems to indicate what is trending on AMC on-demand.\nAnswer: B.\nAction: CLICK"
+      }
+    ]
+  },
+  {
+    "id": "mind2web_105",
+    "conversations": [
+      {
+        "role": "user",
+        "content": "'''\n<html> <div> <a id=0 unstyled> Free Dealer Price Quote </a> <main> <div> <a> Corolla </a> <a> 2022 </a> <a> Auto Repair Pricing </a> <div id=1> Air Conditioning - Recharge </div> </div> <div> <div> <label> <input id=2 text /> <div text> Your Name * </div> </label> <label> <input id=3 email /> <div email> Email Address * </div> </label> </div> <button id=4 submit> <span> Get Estimates </span> </button> </div> </main> </div> </html>\n'''\n\nBased on the HTML webpage above, try to complete the following task:\nTask: Get a service estimate on AC recharge of my 2022 Toyota Corrola, L Sedan 4D. My name is James Smith, email is buckeye.foobar@gmail.com, and phone number is 6157075521.\nPrevious actions:\n[button]  Select Vehicle -> CLICK\n[button]  No thanks -> CLICK\n[textbox]  Other Ways We Can Help -> TYPE: ac recharge\n[button]  See Pricing -> CLICK\n[button]  Get Service Estimates -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. <a id=0 unstyled> Free Dealer Price Quote </a>\nC. <div id=1> Air Conditioning - Recharge </div>\nD. <input id=2 text />\nE. <input id=3 email />\nF. <button id=4 submit> <span> Get Estimates </span> </button>"
+      },
+      {
+        "role": "assistant",
+        "content": "Thought: The task requires filling out a form with personal information to get the service estimate which is not present on the page. Therefore, no action can be taken at this point.\nAnswer: A. None of the above"
+      }
+    ]
+  }
+]

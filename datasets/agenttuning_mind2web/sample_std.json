@@ -1,0 +1,82 @@
+[
+  {
+    "id": "mind2web_102",
+    "content": [
+      {
+        "class_": "text_observation",
+        "content": "'''\n<html> <div> <header banner> <nav navigation> <button id=0 button view cart, click to view /> </nav> </header> <main main> <section tabpanel> <form> <h3> Check-in </h3> <div> <label id=1> Confirmation or ticket number* </label> <input id=2 text please enter your 6 digit 123456 confirmation number* /> </div> <button id=3 button> Check in with your MileagePlus number </button> <button id=4 submit> Search </button> </form> </section> </main> </div> </html>\n'''\n\nBased on the HTML webpage above, try to complete the following task:\nTask: Browse check in with confirmation number 123456 for John.\nPrevious actions:\n[heading]  Check-in -> CLICK\n[textbox]  Confirmation or ticket number* -> TYPE: 123456\n[textbox]  Last name* -> TYPE: John\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. <button id=0 button view cart, click to view />\nC. <label id=1> Confirmation or ticket number* </label>\nD. <input id=2 text please enter your 6 digit 123456 confirmation\nE. <button id=3 button> Check in with your MileagePlus number </button>\nF. <button id=4 submit> Search </button>",
+        "source": "user"
+      },
+      {
+        "class_": "message_action",
+        "content": "<finish> F.\nAction: CLICK </finish>",
+        "description": "The next action should be to search for check-in using the filled confirmation number and last name."
+      }
+    ],
+    "details": {}
+  },
+  {
+    "id": "mind2web_117",
+    "content": [
+      {
+        "class_": "text_observation",
+        "content": "'''\n<html> <main main> <div> <ul tablist> <li tab heading level 2 book a traveltab> </li> <li tab heading level 2 check flight statustab> </li> <li id=0 tab heading level 2 check in> <div> Check-in </div> </li> <li id=1 tab heading level 2 view and> <div> My trips </div> </li> </ul> <section tabpanel> <div tabpanel> <form> <div> <input id=2 combobox text columbus cmh from* /> <label enter your departing city, airport> From* </label> </div> <div> <div> <input id=3 text depart departdate jun 02 /> <p> Youre on a date field. Either type in the date you want in the format month/day/year or press the down </p> </div> <div> <input id=4 text return returndate jun 04 /> <p> Youre on a date field. Either type in the date you want in the format month/day/year or press the down </p> </div> </div> </form> </div> </section> </div> </main> </html>\n'''\n\nBased on the HTML webpage above, try to complete the following task:\nTask: Browse check in with confirmation number 123456 for John.\nPrevious actions:\nNone\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. <li id=0 tab heading level 2 check in> <div> Check-in\nC. <li id=1 tab heading level 2 view and> <div> My\nD. <input id=2 combobox text columbus cmh from* />\nE. <input id=3 text depart departdate jun 02 />\nF. <input id=4 text return returndate jun 04 />",
+        "source": "user"
+      },
+      {
+        "class_": "message_action",
+        "content": "<finish> A. None of the above </finish>",
+        "description": "The task does not involve any form inputs or tabs. The next action would be None."
+      }
+    ],
+    "details": {}
+  },
+  {
+    "id": "mind2web_29",
+    "content": [
+      {
+        "class_": "text_observation",
+        "content": "'''\n<html> <main> <div> <a> Corolla </a> <a> 2022 </a> <a> Auto Repair Pricing </a> <div id=0> Air Conditioning - Recharge </div> </div> <div> <div> <button id=1 lefticon> </button> <h1> AC Recharge </h1> </div> <div> <label> <input id=2 tel /> <div tel> Phone Number * </div> </label> <button id=3 submit> <span> Get Estimates </span> </button> </div> </div> <a id=4 regular fair repair price range for> Air Conditioning - Recharge </a> </main> </html>\n'''\n\nBased on the HTML webpage above, try to complete the following task:\nTask: Get a service estimate on AC recharge of my 2022 Toyota Corrola, L Sedan 4D. My name is James Smith, email is buckeye.foobar@gmail.com, and phone number is 6157075521.\nPrevious actions:\n[textbox]  Other Ways We Can Help -> TYPE: ac recharge\n[button]  See Pricing -> CLICK\n[button]  Get Service Estimates -> CLICK\n[textbox]  Your Name * -> TYPE: James Smith\n[textbox]  Email Address * -> TYPE: buckeye.foobar@gmail.com\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. <div id=0> Air Conditioning - Recharge </div>\nC. <button id=1 lefticon> </button>\nD. <input id=2 tel />\nE. <button id=3 submit> <span> Get Estimates </span> </button>\nF. <a id=4 regular fair repair price range for> Air Conditioning",
+        "source": "user"
+      },
+      {
+        "class_": "message_action",
+        "content": "<finish> B.\nAction: TYPE\nValue: buckeye.foobar@gmail.com </finish>",
+        "description": "I've entered a name. Now, let's enter an e-mail address."
+      }
+    ],
+    "details": {}
+  },
+  {
+    "id": "mind2web_43",
+    "content": [
+      {
+        "class_": "text_observation",
+        "content": "'''\n<html> <div> <header banner> <div> <a id=0> Now Trending </a> <a> Collections </a> </div> </header> <button id=1> <span> Go to item undefined </span> </button> </div> </html>\n'''\n\nBased on the HTML webpage above, try to complete the following task:\nTask: What is trending now on AMC on-demand?\nPrevious actions:\n[link]  Visit the On Demand page -> HOVER\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. <a id=0> Now Trending </a>\nC. <button id=1> <span> Go to item undefined </span> </button>",
+        "source": "user"
+      },
+      {
+        "class_": "message_action",
+        "content": "<finish> B.\nAction: CLICK </finish>",
+        "description": "The link \"Now Trending\" seems to indicate what is trending on AMC on-demand."
+      }
+    ],
+    "details": {}
+  },
+  {
+    "id": "mind2web_26",
+    "content": [
+      {
+        "class_": "text_observation",
+        "content": "'''\n<html> <nav navigation main> <div search> <form search simplesearch> <div> <button id=0 submit search> <div> search </div> </button> <input id=1 search search games, consoles & more q /> </div> </form> </div> </nav> </html>\n'''\n\nBased on the HTML webpage above, try to complete the following task:\nTask: find kinect camera for xbox one.\nPrevious actions:\nNone\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. <button id=0 submit search> <div> search </div> </button>\nC. <input id=1 search search games, consoles & more q />",
+        "source": "user"
+      },
+      {
+        "class_": "message_action",
+        "content": "<finish> C.\nAction: TYPE\nValue: kinect camera for xbox one </finish>",
+        "description": "I should enter the search term \"kinect camera for xbox one\"."
+      }
+    ],
+    "details": {}
+  }
+]

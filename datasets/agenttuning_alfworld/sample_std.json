@@ -1,0 +1,834 @@
+[
+  {
+    "id": "alfworld_104",
+    "content": [
+      {
+        "class_": "text_observation",
+        "content": "Interact with a household to solve a task. Imagine you are an intelligent agent in a household environment and your target is to perform actions to complete the task goal. At the beginning of your interactions, you will be given the detailed description of the current environment and your goal to accomplish. For each of your turn, you will be given a list of actions which you can choose one to perform in this turn.\nAfter your each turn, the environment will give you immediate feedback based on which you plan your next few steps. if the envrionment output \"Nothing happened\", that means the previous action is invalid and you should try more options.\n Reminder: \n1. the action must be chosen from the given available actions. Any actions except provided available actions will be regarded as illegal. \n2. Think when necessary, try to act directly more in the process.\n\nOk? Understood?",
+        "source": "user"
+      },
+      {
+        "class_": "message_action",
+        "content": "OK. I'll follow your instructions and try my best to solve the task.",
+        "description": null
+      },
+      {
+        "class_": "text_observation",
+        "content": "Here is your task. You are in the middle of a room. Looking quickly around you, you see a cabinet 26, a cabinet 25, a cabinet 24, a cabinet 23, a cabinet 22, a cabinet 21, a cabinet 20, a cabinet 19, a cabinet 18, a cabinet 17, a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 12, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\nYour task is to: put a clean lettuce in fridge.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "inventory",
+        "kwargs": {},
+        "description": "I will need to locate a lettuce, clean it at the sink basin, and then put it in the fridge. Let's start by looking at the inventory to see if I already have a lettuce."
+      },
+      {
+        "class_": "text_observation",
+        "content": "You are not carrying anything.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"fridge 1\""
+        },
+        "description": "The lettuce could be in the fridge, cabinets, or countertops. Starting with the fridge seems reasonable since it's common to store vegetables in the fridge."
+      },
+      {
+        "class_": "text_observation",
+        "content": "The fridge 1 is closed.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "open",
+        "kwargs": {
+          "obj": "\"fridge 1\""
+        },
+        "description": "The fridge is closed, so I need to open it to access its contents and look for the lettuce."
+      },
+      {
+        "class_": "text_observation",
+        "content": "You open the fridge 1. The fridge 1 is open. In it, you see a apple 1, a cup 1, a lettuce 4, and a tomato 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "take",
+        "kwargs": {
+          "item": "\"lettuce 4\"",
+          "source": "\"fridge 1\""
+        },
+        "description": "I opened the fridge and found multiple lettuces inside. I need a clean lettuce for the task, so I will take one lettuce from the fridge to bring it out and clean it."
+      },
+      {
+        "class_": "text_observation",
+        "content": "You pick up the lettuce 4 from the fridge 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"sinkbasin 1\""
+        },
+        "description": "I’ve picked up the lettuce and need to clean it under running water. I’m heading to the sink basin to wash it before putting it in the fridge."
+      },
+      {
+        "class_": "text_observation",
+        "content": "On the sinkbasin 1, you see nothing.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "clean",
+        "kwargs": {
+          "item": "\"lettuce 4\"",
+          "appliance": "\"sinkbasin 1\""
+        },
+        "description": "The task requires putting a clean lettuce in the fridge. I’ve brought the lettuce to the sink basin, so now I should clean it under running water before placing it back into the fridge."
+      },
+      {
+        "class_": "text_observation",
+        "content": "You clean the lettuce 4 using the sinkbasin 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"fridge 1\""
+        },
+        "description": "I have now cleaned the lettuce at the sink as required. To complete the task of putting a clean lettuce in the fridge, I need to go back to the fridge and place it inside."
+      },
+      {
+        "class_": "text_observation",
+        "content": "The fridge 1 is open. In it, you see a apple 1, a cup 1, and a tomato 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "put",
+        "kwargs": {
+          "item": "\"lettuce 4\"",
+          "target": "\"fridge 1\""
+        },
+        "description": "I’ve cleaned the lettuce and the fridge is open, so now I can place the clean lettuce into the fridge to complete the task."
+      },
+      {
+        "class_": "text_observation",
+        "content": "Task completed successfully.",
+        "source": "user"
+      },
+      {
+        "class_": "message_action",
+        "content": "<finish> </finish>",
+        "description": "I did it! The task is now complete."
+      }
+    ],
+    "details": {}
+  },
+  {
+    "id": "alfworld_283",
+    "content": [
+      {
+        "class_": "text_observation",
+        "content": "Interact with a household to solve a task. Imagine you are an intelligent agent in a household environment and your target is to perform actions to complete the task goal. At the beginning of your interactions, you will be given the detailed description of the current environment and your goal to accomplish. For each of your turn, you will be given a list of actions which you can choose one to perform in this turn.\nAfter your each turn, the environment will give you immediate feedback based on which you plan your next few steps. if the envrionment output \"Nothing happened\", that means the previous action is invalid and you should try more options.\n Reminder: \n1. the action must be chosen from the given available actions. Any actions except provided available actions will be regarded as illegal. \n2. Think when necessary, try to act directly more in the process.\n\nOk? Understood?",
+        "source": "user"
+      },
+      {
+        "class_": "message_action",
+        "content": "OK. I'll follow your instructions and try my best to solve the task.",
+        "description": null
+      },
+      {
+        "class_": "text_observation",
+        "content": "Here is your task. You are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 2, a desk 1, a garbagecan 1, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.\nYour task is to: put two cellphone in shelf.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"desk 1\""
+        },
+        "description": "The task is to put two cellphones in shelf. It's unclear where the cellphones are right now, but desks are the most common place where I can find them. I'll start with desk 1."
+      },
+      {
+        "class_": "text_observation",
+        "content": "On the desk 1, you see a alarmclock 2, a alarmclock 1, and a pencil 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"desk 2\""
+        },
+        "description": "There was no cellphone on desk 1. I'll try with desk 2 next."
+      },
+      {
+        "class_": "text_observation",
+        "content": "On the desk 2, you see a book 2, a cellphone 2, a cellphone 1, and a pen 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "take",
+        "kwargs": {
+          "item": "\"cellphone 1\"",
+          "source": "\"desk 2\""
+        },
+        "description": "I need two cellphones to place on a shelf, and I see two on desk 2. I’ll take cellphone 1 from desk 2 so I can later put it on the shelf."
+      },
+      {
+        "class_": "text_observation",
+        "content": "You pick up the cellphone 1 from the desk 2.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "take",
+        "kwargs": {
+          "item": "\"cellphone 2\"",
+          "source": "\"desk 2\""
+        },
+        "description": "I’ve already picked up one cellphone and need a second to complete the task, so I’ll take cellphone 2 from desk 2."
+      },
+      {
+        "class_": "text_observation",
+        "content": "You put the cellphone 1 in/on the desk 2.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "take",
+        "kwargs": {
+          "item": "\"cellphone 2\"",
+          "source": "\"desk 2\""
+        },
+        "description": "I need two cellphones to place on a shelf and have already picked up one. Since there is a second cellphone (cellphone 2) on desk 2, I will take it to fulfill the requirement of two cellphones."
+      },
+      {
+        "class_": "text_observation",
+        "content": "You pick up the cellphone 2 from the desk 2.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"shelf 1\""
+        },
+        "description": "I’ve now picked up both cellphones and need to place them on a shelf to complete the task. I’ll go to shelf 1 first to put them there."
+      },
+      {
+        "class_": "text_observation",
+        "content": "On the shelf 1, you see a book 1, and a pencil 2.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "put",
+        "kwargs": {
+          "item": "\"cellphone 2\"",
+          "target": "\"shelf 1\""
+        },
+        "description": "I need to place both cellphones on a shelf to complete the task. I’m currently at shelf 1, so I’ll put cellphone 2 here."
+      },
+      {
+        "class_": "text_observation",
+        "content": "You put the cellphone 2 in/on the shelf 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"shelf 2\""
+        },
+        "description": "I’ve placed one cellphone on shelf 1 and still need to place the second one. I’ll go to shelf 2 to put the remaining cellphone there."
+      },
+      {
+        "class_": "text_observation",
+        "content": "On the shelf 2, you see a desklamp 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "put",
+        "kwargs": {
+          "item": "\"cellphone 1\"",
+          "target": "\"shelf 2\""
+        },
+        "description": "I’ve already placed one cellphone on shelf 1 and need to place the second one to complete the task. Since I’m now at shelf 2, I’ll put cellphone 1 here to fulfill the requirement of two cellphones on shelves."
+      },
+      {
+        "class_": "text_observation",
+        "content": "On the shelf 2, you see a desklamp 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"shelf 3\""
+        },
+        "description": "It seems like the last action wasn't successful, the cellphone wasn't placed on shelf 2. I will try again to put it on another shelf."
+      },
+      {
+        "class_": "text_observation",
+        "content": "On the shelf 3, you see a creditcard 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "put",
+        "kwargs": {
+          "item": "\"cellphone 1\"",
+          "target": "\"shelf 3\""
+        },
+        "description": "I still need to place the second cellphone on a shelf to complete the task. My last attempt on shelf 2 didn’t register, so I moved to shelf 3 and will now put cellphone 1 here."
+      },
+      {
+        "class_": "text_observation",
+        "content": "You pick up the creditcard 1 from the shelf 3.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"shelf 4\""
+        },
+        "description": "It seems that the previous action was not correct. The cellphone was not put on the shelf 3 but rather I picked up a credit card 1. I will now try again to put the cellphone back on a shelf."
+      },
+      {
+        "class_": "text_observation",
+        "content": "On the shelf 4, you see a pencil 3.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "put",
+        "kwargs": {
+          "item": "\"cellphone 1\"",
+          "target": "\"shelf 4\""
+        },
+        "description": "I still need to place the second cellphone on a shelf to complete the task. My attempts on shelf 2 and shelf 3 didn’t register correctly, so now that I’m at shelf 4, I’ll put cellphone 1 here."
+      },
+      {
+        "class_": "text_observation",
+        "content": "You put the creditcard 1 in/on the shelf 4.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "inventory",
+        "kwargs": {},
+        "description": "There seems to be some confusion about which object I'm currently holding. My task is about cellphones, not credit cards."
+      },
+      {
+        "class_": "text_observation",
+        "content": "You are not carrying anything.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"desk 2\""
+        },
+        "description": "It seems there was some misunderstanding in previous tasks, I need to ensure I'm carrying the right object. I will go back to desk 2 to get the cellphone."
+      },
+      {
+        "class_": "text_observation",
+        "content": "On the desk 2, you see a book 2, a cellphone 1, and a pen 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "take",
+        "kwargs": {
+          "item": "\"cellphone 1\"",
+          "source": "\"desk 2\""
+        },
+        "description": "I currently have no cellphones and need two to complete the task of putting them on shelves. There’s a cellphone on desk 2, so I’ll take cellphone 1 from desk 2 to collect one of the required items."
+      },
+      {
+        "class_": "text_observation",
+        "content": "You pick up the cellphone 1 from the desk 2.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"shelf 5\""
+        },
+        "description": "I am currently holding one cellphone and still need to place two cellphones onto shelves. Since I’ve already visited shelves 1–4 (and encountered issues when trying to put the phone there), I’ll go to shelf 5—the only remaining shelf—to finally place the cellphone there."
+      },
+      {
+        "class_": "text_observation",
+        "content": "On the shelf 5, you see a book 3.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "put",
+        "kwargs": {
+          "item": "\"cellphone 1\"",
+          "target": "\"shelf 5\""
+        },
+        "description": "I need to place two cellphones onto shelves to complete the task. I am currently holding one cellphone and shelf 5 is the only shelf I haven’t used yet, so I will put cellphone 1 on shelf 5 to fulfill the requirement."
+      },
+      {
+        "class_": "text_observation",
+        "content": "You put the cellphone 1 in/on the shelf 5.",
+        "source": "user"
+      },
+      {
+        "class_": "text_observation",
+        "content": "ACTION: Task succeeded.",
+        "source": "agent"
+      },
+      {
+        "class_": "text_observation",
+        "content": "Nothing happens.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "look",
+        "kwargs": {},
+        "description": "The task has been marked as succeeded and no further feedback is provided. I’m issuing a look action now to gather the current state of the environment and confirm that the cellphones are placed correctly on the shelves."
+      },
+      {
+        "class_": "text_observation",
+        "content": "You are facing the shelf 5, and shelf 3. Next to it, you see nothing.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "examine",
+        "kwargs": {
+          "obj": "\"shelf 5\""
+        },
+        "description": "I need to verify that the cellphone I placed on shelf 5 is actually there and that the task completed successfully, so I’ll examine shelf 5 to confirm its contents."
+      },
+      {
+        "class_": "text_observation",
+        "content": "On the shelf 5, you see a book 3, and a cellphone 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"desk 2\""
+        },
+        "description": "The information says that there is one cellphone on shelf 5. But I need to put two cellphones in the shelf as the task said. I will go back to desk 2 to pick up another cellphone."
+      },
+      {
+        "class_": "text_observation",
+        "content": "On the desk 2, you see a book 2, and a pen 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"bed 1\""
+        },
+        "description": "It seems like there's no more cellphone on the desk 2. It's possible that there are cellphones on different spots of the room. I will need to check other places."
+      },
+      {
+        "class_": "text_observation",
+        "content": "On the bed 1, you see a cellphone 4, a cellphone 3, a laptop 1, a pillow 2, a pillow 1, and a teddybear 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "take",
+        "kwargs": {
+          "item": "\"cellphone 4\"",
+          "source": "\"bed 1\""
+        },
+        "description": "I still need a second cellphone to complete the task of putting two cellphones on shelves. Since I see cellphone 4 on the bed and it’s available, I will take cellphone 4 from bed 1."
+      },
+      {
+        "class_": "text_observation",
+        "content": "You pick up the cellphone 4 from the bed 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"shelf 5\""
+        },
+        "description": "I’ve just picked up the second cellphone (cellphone 4) and still need to place two cellphones on shelves. Earlier I successfully placed the first cellphone on shelf 5, so I’ll return to shelf 5 to put down this second one and complete the task."
+      },
+      {
+        "class_": "text_observation",
+        "content": "On the shelf 5, you see a book 3, and a cellphone 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "put",
+        "kwargs": {
+          "item": "\"cellphone 4\"",
+          "target": "\"shelf 5\""
+        },
+        "description": "I have just picked up the second cellphone and need to place two cellphones on a shelf to complete the task. Shelf 5 already contains one cellphone and I’m here now, so I’ll put cellphone 4 on shelf 5 to fulfill the requirement."
+      },
+      {
+        "class_": "text_observation",
+        "content": "Your implementation satisfies the task requirements.",
+        "source": "user"
+      },
+      {
+        "class_": "message_action",
+        "content": "<finish> </finish>",
+        "description": "I've wrapped up the task successfully."
+      }
+    ],
+    "details": {}
+  },
+  {
+    "id": "alfworld_18",
+    "content": [
+      {
+        "class_": "text_observation",
+        "content": "Interact with a household to solve a task. Imagine you are an intelligent agent in a household environment and your target is to perform actions to complete the task goal. At the beginning of your interactions, you will be given the detailed description of the current environment and your goal to accomplish. For each of your turn, you will be given a list of actions which you can choose one to perform in this turn.\nAfter your each turn, the environment will give you immediate feedback based on which you plan your next few steps. if the envrionment output \"Nothing happened\", that means the previous action is invalid and you should try more options.\n Reminder: \n1. the action must be chosen from the given available actions. Any actions except provided available actions will be regarded as illegal. \n2. Think when necessary, try to act directly more in the process.\n\nOk? Understood?",
+        "source": "user"
+      },
+      {
+        "class_": "message_action",
+        "content": "OK. I'll follow your instructions and try my best to solve the task.",
+        "description": null
+      },
+      {
+        "class_": "text_observation",
+        "content": "Here is your task. You are in the middle of a room. Looking quickly around you, you see a cabinet 27, a cabinet 26, a cabinet 25, a cabinet 24, a cabinet 23, a cabinet 22, a cabinet 21, a cabinet 20, a cabinet 19, a cabinet 18, a cabinet 17, a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 12, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\nYour task is to: put a hot tomato in garbagecan.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"fridge 1\""
+        },
+        "description": "The task requires me to put a hot tomato in the garbage can. I suppose to first find a tomato, then heat it. After that, I need to throw it in the garbage can. Since food is usually stored in the fridge, I'll check there first."
+      },
+      {
+        "class_": "text_observation",
+        "content": "The fridge 1 is closed.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "open",
+        "kwargs": {
+          "obj": "\"fridge 1\""
+        },
+        "description": "The fridge is closed, so I need to open it to access its contents and find the tomato needed for the task."
+      },
+      {
+        "class_": "text_observation",
+        "content": "You open the fridge 1. The fridge 1 is open. In it, you see a apple 3, a lettuce 2, and a tomato 2.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "take",
+        "kwargs": {
+          "item": "\"tomato 2\"",
+          "source": "\"fridge 1\""
+        },
+        "description": "I need a tomato to heat before disposing of it. Since tomato 2 is visible inside the open fridge, I will take it out now."
+      },
+      {
+        "class_": "text_observation",
+        "content": "You pick up the tomato 2 from the fridge 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"microwave 1\""
+        },
+        "description": "I need to heat the tomato to fulfill the requirement of disposing a hot tomato. The microwave is the appropriate appliance for heating, so I will go to microwave 1."
+      },
+      {
+        "class_": "text_observation",
+        "content": "The microwave 1 is closed.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "heat",
+        "kwargs": {
+          "item": "\"tomato 2\"",
+          "appliance": "\"microwave 1\""
+        },
+        "description": "To fulfill the requirement of disposing a hot tomato, I must first heat the tomato I picked up. Using the microwave is the quickest way to make the tomato hot before placing it in the garbage can."
+      },
+      {
+        "class_": "text_observation",
+        "content": "You heat the tomato 2 using the microwave 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"garbagecan 1\""
+        },
+        "description": "The task is to put a hot tomato in the garbagecan. Having heated the tomato, I now need to go to the garbagecan to dispose of it."
+      },
+      {
+        "class_": "text_observation",
+        "content": "On the garbagecan 1, you see nothing.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "put",
+        "kwargs": {
+          "item": "\"tomato 2\"",
+          "target": "\"garbagecan 1\""
+        },
+        "description": "I have the heated tomato and I'm at the garbage can, so I'll place the hot tomato into the garbage can to complete the task of disposing of a hot tomato."
+      },
+      {
+        "class_": "text_observation",
+        "content": "Congratulations! You have successfully solved the task.",
+        "source": "user"
+      },
+      {
+        "class_": "message_action",
+        "content": "<finish> </finish>",
+        "description": "The objective has been achieved with no outstanding issues."
+      }
+    ],
+    "details": {}
+  },
+  {
+    "id": "alfworld_142",
+    "content": [
+      {
+        "class_": "text_observation",
+        "content": "Interact with a household to solve a task. Imagine you are an intelligent agent in a household environment and your target is to perform actions to complete the task goal. At the beginning of your interactions, you will be given the detailed description of the current environment and your goal to accomplish. For each of your turn, you will be given a list of actions which you can choose one to perform in this turn.\nAfter your each turn, the environment will give you immediate feedback based on which you plan your next few steps. if the envrionment output \"Nothing happened\", that means the previous action is invalid and you should try more options.\n Reminder: \n1. the action must be chosen from the given available actions. Any actions except provided available actions will be regarded as illegal. \n2. Think when necessary, try to act directly more in the process.\n\nOk? Understood?",
+        "source": "user"
+      },
+      {
+        "class_": "message_action",
+        "content": "OK. I'll follow your instructions and try my best to solve the task.",
+        "description": null
+      },
+      {
+        "class_": "text_observation",
+        "content": "Here is your task. You are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 2, a drawer 1, a garbagecan 1, a shelf 1, and a sidetable 1.\nYour task is to: put some cd on sidetable.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"desk 1\""
+        },
+        "description": "The task is to put some cd on sidetable. First i need to find where the cd is, after finding it, i will take it to the sidetable. I will start my search from the desk."
+      },
+      {
+        "class_": "text_observation",
+        "content": "On the desk 1, you see a alarmclock 1, a book 1, a cd 3, a cd 2, a cd 1, a creditcard 1, a desklamp 1, a keychain 1, a mug 1, and a pencil 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "take",
+        "kwargs": {
+          "item": "\"cd 1\"",
+          "source": "\"desk 1\""
+        },
+        "description": "To place a CD on the sidetable, I must first pick one up. I see three CDs on the desk, so I will take cd 1 now."
+      },
+      {
+        "class_": "text_observation",
+        "content": "You pick up the cd 1 from the desk 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"sidetable 1\""
+        },
+        "description": "I’ve picked up the CD from the desk, so now I need to move to the sidetable in order to fulfill the task of placing the CD there."
+      },
+      {
+        "class_": "text_observation",
+        "content": "On the sidetable 1, you see a alarmclock 2, a creditcard 2, a pen 2, and a pen 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "put",
+        "kwargs": {
+          "item": "\"cd 1\"",
+          "target": "\"sidetable 1\""
+        },
+        "description": "I’ve arrived at the sidetable holding cd 1, and my goal is to put a CD on the sidetable, so I will place cd 1 there to complete the task."
+      },
+      {
+        "class_": "text_observation",
+        "content": "Your solution has been verified as correct. ",
+        "source": "user"
+      },
+      {
+        "class_": "message_action",
+        "content": "<finish> </finish>",
+        "description": "I have successfully completed the task."
+      }
+    ],
+    "details": {}
+  },
+  {
+    "id": "alfworld_327",
+    "content": [
+      {
+        "class_": "text_observation",
+        "content": "Interact with a household to solve a task. Imagine you are an intelligent agent in a household environment and your target is to perform actions to complete the task goal. At the beginning of your interactions, you will be given the detailed description of the current environment and your goal to accomplish. For each of your turn, you will be given a list of actions which you can choose one to perform in this turn.\nAfter your each turn, the environment will give you immediate feedback based on which you plan your next few steps. if the envrionment output \"Nothing happened\", that means the previous action is invalid and you should try more options.\n Reminder: \n1. the action must be chosen from the given available actions. Any actions except provided available actions will be regarded as illegal. \n2. Think when necessary, try to act directly more in the process.\n\nOk? Understood?",
+        "source": "user"
+      },
+      {
+        "class_": "message_action",
+        "content": "OK. I'll follow your instructions and try my best to solve the task.",
+        "description": null
+      },
+      {
+        "class_": "text_observation",
+        "content": "Here is your task. You are in the middle of a room. Looking quickly around you, you see a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a diningtable 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\nYour task is to: put a hot mug in coffeemachine.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"diningtable 1\""
+        },
+        "description": "The task is to put a hot mug in coffeemachine. Firstly, i need to find a mug which is likely to be found on the dining table or the kitchen countertops, and then heat it using the stoveburner or the microwave. After that, put it in the coffeemachine. I'll start my search on the dining table."
+      },
+      {
+        "class_": "text_observation",
+        "content": "On the diningtable 1, you see a apple 2, a bread 2, a butterknife 2, a butterknife 1, a fork 1, a peppershaker 3, a pot 1, a soapbottle 3, a soapbottle 2, a spatula 2, a spoon 2, and a tomato 2.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"countertop 1\""
+        },
+        "description": "There is no mug on the dining table. Let's check the kitchen countertops."
+      },
+      {
+        "class_": "text_observation",
+        "content": "On the countertop 1, you see a apple 1, a bread 1, a peppershaker 2, a peppershaker 1, a potato 1, and a saltshaker 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"countertop 2\""
+        },
+        "description": "There is no mug on countertop 1. Let's check the next countertop."
+      },
+      {
+        "class_": "text_observation",
+        "content": "On the countertop 2, you see a mug 1, and a spatula 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "take",
+        "kwargs": {
+          "item": "\"mug 1\"",
+          "source": "\"countertop 2\""
+        },
+        "description": "I need a mug to complete the task of putting a hot mug in the coffee machine. I finally located one on countertop 2, so I will take it to prepare it next."
+      },
+      {
+        "class_": "text_observation",
+        "content": "You pick up the mug 1 from the countertop 2.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"microwave 1\""
+        },
+        "description": "I now have the mug and need to heat it before placing it in the coffee machine. The microwave is a convenient appliance for heating the mug, so I’ll go to the microwave next."
+      },
+      {
+        "class_": "text_observation",
+        "content": "The microwave 1 is closed.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "heat",
+        "kwargs": {
+          "item": "\"mug 1\"",
+          "appliance": "\"microwave 1\""
+        },
+        "description": "To fulfill the goal of putting a hot mug in the coffee machine, I must heat the mug first. I have taken mug 1 and reached the closed microwave 1, so now I will use the microwave to heat the mug."
+      },
+      {
+        "class_": "text_observation",
+        "content": "You heat the mug 1 using the microwave 1.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "go",
+        "kwargs": {
+          "location": "\"coffeemachine 1\""
+        },
+        "description": "The mug is now heated, and to complete the task of putting a hot mug in the coffee machine, I need to go to the coffee machine to place it there."
+      },
+      {
+        "class_": "text_observation",
+        "content": "On the coffeemachine 1, you see nothing.",
+        "source": "user"
+      },
+      {
+        "class_": "api_action",
+        "function": "put",
+        "kwargs": {
+          "item": "\"mug 1\"",
+          "target": "\"coffeemachine 1\""
+        },
+        "description": "I have heated mug 1 and moved to coffeemachine 1, which is empty. To fulfill the task of putting a hot mug in the coffeemachine, I now place the heated mug into the coffeemachine."
+      },
+      {
+        "class_": "text_observation",
+        "content": "Congratulations! You have successfully solved the task.",
+        "source": "user"
+      },
+      {
+        "class_": "message_action",
+        "content": "<finish> </finish>",
+        "description": "I've wrapped up the task successfully."
+      }
+    ],
+    "details": {}
+  }
+]
