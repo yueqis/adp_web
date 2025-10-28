@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Data Protocol - Standardizing Agent Interaction Data</title>
+    <meta name="description" content="Agent Data Protocol: A standardized framework for collecting, processing, and sharing agent interaction data across multiple platforms and datasets.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-left">
+                    <div class="logo">
+                        <i class="fas fa-network-wired"></i>
+                        <span>Agent Data Protocol</span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <nav class="nav-links">
+                        <a href="#overview" class="nav-link">Overview</a>
+                        <a href="#stats" class="nav-link">Stats</a>
+                        <a href="#features" class="nav-link">Features</a>
+                        <a href="#demo" class="nav-link">Demo</a>
+                        <a href="#resources" class="nav-link">Resources</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero-section" id="overview">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Agent Data Protocol</h1>
+                        <p class="hero-subtitle">Standardizing Agent Interaction Data</p>
+                        <p class="hero-description">
+                            A comprehensive framework for collecting, processing, and sharing agent interaction data across multiple platforms and datasets. 
+                            Enabling reproducible research and seamless integration of agent behaviors.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#paper-link" class="btn btn-secondary" id="paperBtn">
+                                <i class="fas fa-file-alt"></i>
+                                Read Paper
+                            </a>
+                            <a href="#github-link" class="btn btn-secondary" id="githubBtn">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                            <a href="#huggingface-repo-link" class="btn btn-secondary" id="hfBtn" style="display:inline-flex; align-items:center; gap:0.5rem;">
+                                <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" style="height:20px; width:auto;">
+                                Hugging Face
+                            </a>
+                              
+                              
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="protocol-diagram">
+                            <div class="protocol-node">
+                                <i class="fas fa-database"></i>
+                                <span>Data Sources</span>
+                            </div>
+                            <div class="protocol-arrow">→</div>
+                            <div class="protocol-node">
+                                <i class="fas fa-cogs"></i>
+                                <span>Protocol</span>
+                            </div>
+                            <div class="protocol-arrow">→</div>
+                            <div class="protocol-node">
+                                <i class="fas fa-robot"></i>
+                                <span>Agents</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="stats-section" id="stats">
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="13">0</div>
+                        <div class="stat-label">Supported Datasets</div>
+                        <div class="stat-description">Comprehensive coverage</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="3">0</div>
+                        <div class="stat-label">Integrated Agents</div>
+                        <div class="stat-description">Multi-platform agent support</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="1270000">0</div>
+                        <div class="stat-label">Total Data Standardized</div>
+                        <div class="stat-description">Unified format compliance</div>
+                        <div class="stat-unit">%</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section id="features" style="padding: 4rem 2rem; background: #f8fafc;">
+                <div style="max-width: 1200px; margin: 0 auto;">
+                    <h2 style="font-size: 2.5rem; font-weight: 700; text-align: center; margin-bottom: 3rem; color: #1f2937;">Key Features</h2>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                        
+                        <div style="background: white; border: 2px solid #667eea; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);">
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #22c55e 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                <i class="fas fa-exchange-alt" style="font-size: 1.5rem; color: white;"></i>
+                            </div>
+                            <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; color: #1f2937;">Standardized Format</h3>
+                            <p style="color: #6b7280; line-height: 1.6;">Unified data structure for agent interactions across different platforms and environments.</p>
+                        </div>
+
+                        <div style="background: white; border: 2px solid #667eea; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);">
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #22c55e 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                <i class="fas fa-plug" style="font-size: 1.5rem; color: white;"></i>
+                            </div>
+                            <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; color: #1f2937;">Easy Integration</h3>
+                            <p style="color: #6b7280; line-height: 1.6;">Simple integration with existing datasets / agent frameworks.</p>
+                        </div>
+
+                        <div style="background: white; border: 2px solid #667eea; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);">
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #22c55e 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                <i class="fas fa-chart-line" style="font-size: 1.5rem; color: white;"></i>
+                            </div>
+                            <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; color: #1f2937;">Scalable Architecture</h3>
+                            <p style="color: #6b7280; line-height: 1.6;">Designed to handle large-scale data collection and processing efficiently.</p>
+                        </div>
+
+                        <div style="background: white; border: 2px solid #667eea; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);">
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #22c55e 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                <i class="fas fa-play" style="font-size: 1.5rem; color: white;"></i>
+                            </div>
+                            <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; color: #1f2937;">Action Tracking</h3>
+                            <p style="color: #6b7280; line-height: 1.6;">Comprehensive collection of agent actions including tool calls, code generation, etc.</p>
+                        </div>
+
+                        <div style="background: white; border: 2px solid #667eea; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);">
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #22c55e 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                <i class="fas fa-eye" style="font-size: 1.5rem; color: white;"></i>
+                            </div>
+                            <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; color: #1f2937;">Observation Capture</h3>
+                            <p style="color: #6b7280; line-height: 1.6;">Detailed recording of environment states, responses, and feedback for complete interaction context.</p>
+                        </div>
+
+                        <div style="background: white; border: 2px solid #667eea; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);">
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #22c55e 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                <i class="fas fa-vector-square" style="font-size: 1.5rem; color: white;"></i>
+                            </div>
+                            <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; color: #1f2937;">Reasoning Traces</h3>
+                            <p style="color: #6b7280; line-height: 1.6;">Capture agent thought processes, planning steps, and decision-making rationale.</p>
+                        </div>
+                        
+                        <div style="background: white; border: 2px solid #667eea; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);">
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #22c55e 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                <i class="fas fa-search" style="font-size: 1.5rem; color: white;"></i>
+                            </div>
+                            <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; color: #1f2937;">Quality Assurance and Analysis</h3>
+                            <p style="color: #6b7280; line-height: 1.6;">Enable quality assurance and analysis across different datasets.</p>
+                        </div>
+
+                        <div style="background: white; border: 2px solid #667eea; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);">
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #22c55e 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                <i class="fas fa-users" style="font-size: 1.5rem; color: white;"></i>
+                            </div>
+                            <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; color: #1f2937;">Open Source Development and Contributions</h3>
+                            <p style="color: #6b7280; line-height: 1.6;">Open-source development with contributions from the research community.</p>
+                        </div>
+
+                        <div style="background: white; border: 2px solid #667eea; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);">
+                          <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #22c55e 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                            <i class="fas fa-sitemap" style="font-size: 1.5rem; color: white;"></i>
+                          </div>
+                          <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; color: #1f2937;">Reduced Community Effort</h3>
+                          <p style="color: #6b7280; line-height: 1.6;">Replace many-to-many dataset to agent conversion with one-time adapters, reducing redundant engineering across projects.</p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Demo Section -->
+            <section id="demo" style="padding: 4rem 2rem; background: #ffffff;">
+                <div style="max-width: 1400px; margin: 0 auto;">
+                    <h2 style="font-size: 2.5rem; font-weight: 700; text-align: center; margin-bottom: 3rem; color: #1f2937;">Interactive Demo</h2>
+                    
+                    <!-- Controls -->
+                    <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 3rem; flex-wrap: wrap;">
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <label style="font-weight: 600; margin-bottom: 0.5rem; color: #374151;">Dataset</label>
+                            <select id="datasetSelect" style="padding: 0.75rem 1rem; border: 2px solid #d1d5db; border-radius: 8px; font-size: 1rem; min-width: 200px; background: white;">
+                                <option value="">Select Dataset...</option>
+                            </select>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <label style="font-weight: 600; margin-bottom: 0.5rem; color: #374151;">Agent</label>
+                            <select id="agentSelect" style="padding: 0.75rem 1rem; border: 2px solid #d1d5db; border-radius: 8px; font-size: 1rem; min-width: 200px; background: white;">
+                                <option value="">Select Agent...</option>
+                                <option value="openhands">OpenHands</option>
+                                <option value="sweagent">SWE-Agent</option>
+                                <option value="agentlab">AgentLab</option>
+                            </select>
+                        </div>
+                        <button id="loadDemo" style="padding: 0.75rem 2rem; background: linear-gradient(135deg, #667eea 0%, #22c55e 100%); color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; margin-top: 1.5rem;">
+                            Load Demo
+                        </button>
+                    </div>
+
+                    <!-- Demo Content -->
+                    <div id="demoContent" style="display: none;">
+                        <!-- Three blocks in one row -->
+                        <div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 1rem; align-items: start; max-width: 1400px; margin: 0 auto;">
+                            <!-- Block 1: Raw Data -->
+                            <div style="height: 400px; max-height: 400px; overflow: hidden;">
+                                <div style="background: #f8fafc; border: 2px solid #e5e7eb; border-radius: 12px; padding: 1rem; height: 100%; display: flex; flex-direction: column; box-sizing: border-box;">
+                                    <h3 style="font-size: 1.1rem; font-weight: 600; margin: 0 0 0.75rem 0; color: #1f2937; text-align: center; flex-shrink: 0;">Raw Data</h3>
+                                    <div id="rawDataBlock" style="background: white; border-radius: 8px; padding: 0.75rem; flex: 1; overflow-y: auto; font-family: 'Courier New', monospace; font-size: 0.75rem; line-height: 1.3; border: 1px solid #e5e7eb; min-height: 0; max-height: 100%; box-sizing: border-box;">
+                                        <!-- Raw JSON will be displayed here -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Arrow 1 -->
+                            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 80px;">
+                                <div style="font-size: 0.9rem; font-weight: 600; color: #6b7280; margin-bottom: 0.5rem; text-align: center; white-space: nowrap;">Raw → ADP</div>
+                                <div style="font-size: 2rem; color: #667eea;">→</div>
+                                <div style="font-size: 0.8rem; color: #9ca3af; margin-top: 0.5rem; text-align: center;">Standardized<br>Converter</div>
+                            </div>
+
+                            <!-- Block 2: ADP Standardized -->
+                            <div style="height: 400px; max-height: 400px; overflow: hidden;">
+                                <div style="background: #f0f9ff; border: 2px solid #0ea5e9; border-radius: 12px; padding: 1rem; height: 100%; display: flex; flex-direction: column; box-sizing: border-box;">
+                                    <h3 style="font-size: 1.1rem; font-weight: 600; margin: 0 0 0.75rem 0; color: #1f2937; text-align: center; flex-shrink: 0;">ADP Standardized</h3>
+                                    <div id="stdDataBlock" style="background: white; border-radius: 8px; padding: 0.75rem; flex: 1; overflow-y: auto; border: 1px solid #0ea5e9; min-height: 0; max-height: 100%; box-sizing: border-box;">
+                                        <!-- Standardized trajectory will be displayed here -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Arrow 2 -->
+                            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 80px;">
+                                <div style="font-size: 0.9rem; font-weight: 600; color: #6b7280; margin-bottom: 0.5rem; text-align: center; white-space: nowrap;">ADP → Agent</div>
+                                <div style="font-size: 2rem; color: #667eea;">→</div>
+                                <div style="font-size: 0.8rem; color: #9ca3af; margin-top: 0.5rem; text-align: center;">Agent Specific<br>Converter</div>
+                            </div>
+
+                            <!-- Block 3: Agent Conversation -->
+                            <div style="height: 400px; max-height: 400px; overflow: hidden;">
+                                <div style="background: #f0fdf4; border: 2px solid #22c55e; border-radius: 12px; padding: 1rem; height: 100%; display: flex; flex-direction: column; box-sizing: border-box;">
+                                    <h3 style="font-size: 1.1rem; font-weight: 600; margin: 0 0 0.75rem 0; color: #1f2937; text-align: center; flex-shrink: 0;">Agent Conversation</h3>
+                                    <div id="agentDataBlock" style="background: white; border-radius: 8px; padding: 0.75rem; flex: 1; overflow-y: auto; border: 1px solid #22c55e; min-height: 0; max-height: 100%; box-sizing: border-box;">
+                                        <!-- Agent conversation will be displayed here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Responsive layout for smaller screens -->
+                        <style>
+                            @media (max-width: 1200px) {
+                                #demoContent > div {
+                                    grid-template-columns: 1fr !important;
+                                    gap: 2rem !important;
+                                }
+                                #demoContent .arrow-container {
+                                    transform: rotate(90deg);
+                                    margin: 1rem 0;
+                                }
+                            }
+                        </style>
+                    </div>
+
+                    <!-- Loading State -->
+                    <div id="loadingState" style="display: none; text-align: center; padding: 3rem;">
+                        <div style="font-size: 1.2rem; color: #6b7280;">Loading demo data...</div>
+                    </div>
+
+                    <!-- Error State -->
+                    <div id="errorState" style="display: none; text-align: center; padding: 3rem;">
+                        <div style="font-size: 1.2rem; color: #dc2626;">Error loading demo data. Please try again.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resources Section -->
+            <section class="resources-section" id="resources">
+                <div class="resources-container">
+                    <h2 class="section-title">Resources & Links</h2>
+                    <div class="resources-grid">
+                        <div class="resource-card">
+                            <div class="resource-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h3 class="resource-title">Read Paper</h3>
+                            <p class="resource-description">Read the full paper on arXiv</p>
+                            <a href="#arxiv-link" class="resource-link" id="arxivLink">
+                                <i class="fas fa-external-link-alt"></i>
+                                arXiv Link
+                            </a>
+                        </div>
+                        <div class="resource-card">
+                            <div class="resource-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <h3 class="resource-title">Source Code</h3>
+                            <p class="resource-description">Implementation and examples</p>
+                            <a href="#github-repo-link" class="resource-link" id="githubRepoLink">
+                                <i class="fab fa-github"></i>
+                                GitHub Repo
+                            </a>
+                        </div>
+                        <div class="resource-card">
+                            <div class="resource-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3 class="resource-title">Datasets</h3>
+                            <p class="resource-description">Access datasets on Hugging Face</p>
+                            <a href="#huggingface-repo-link" class="resource-link" id="hfLink">
+                                <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" style="height:20px; width:auto;">
+                                Hugging Face Space
+                            </a>
+                        </div>
+                        <!-- <div class="resource-card">
+                            <div class="resource-icon">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <h3 class="resource-title">Discussion</h3>
+                            <p class="resource-description">Join the conversation</p>
+                            <a href="#twitter-thread-link" class="resource-link" id="twitterLink">
+                                <i class="fab fa-twitter"></i>
+                                Twitter Thread
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <i class="fas fa-network-wired"></i>
+                        <span>Agent Data Protocol</span>
+                    </div>
+                    <p class="footer-description">
+                        Standardizing agent interaction data for reproducible research.
+                    </p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <!-- <a href="#documentation" class="footer-link">Documentation</a> -->
+                        <a href="#demo" class="footer-link">Demo</a>
+                        <a href="#contribute" class="footer-link">Contribute</a>
+                        <a href="mailto:yueqis@cs.cmu.edu,gneubig@cs.cmu.edu" class="footer-link">Contact</a>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
